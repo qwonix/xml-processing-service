@@ -6,7 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.qwonix.test.dto.DocumentResponse;
 import ru.qwonix.test.dto.ShortDocumentTransformationHistoryResponse;
 import ru.qwonix.test.entity.DocumentTransformationHistory;
-import ru.qwonix.test.repository.DocumentTransformationHistoryRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -13,7 +13,6 @@ import ru.qwonix.test.DocumentTransformationHistoryService;
 import ru.qwonix.test.entity.DocumentTransformationHistory;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 
