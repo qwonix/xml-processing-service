@@ -20,7 +20,6 @@ public class CamelConfiguration {
         defaultRegistry.bind("documentTransformationHistoryService", documentTransformationHistoryService);
 
         DefaultCamelContext defaultCamelContext = new DefaultCamelContext(defaultRegistry);
-        defaultCamelContext.getPropertiesComponent().setLocation("classpath:camel.properties");
 
         defaultCamelContext.addRoutes(camelRoute);
         defaultCamelContext.addRoutes(storeCamelRoute);

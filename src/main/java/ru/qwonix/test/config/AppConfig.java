@@ -25,21 +25,21 @@ import java.util.Properties;
 @EnableWebMvc
 @EnableJpaRepositories(basePackages = "ru.qwonix.test")
 @EnableTransactionManagement
-@PropertySource(value = {"classpath:application.properties"})
+@PropertySource(value = {"classpath:application.properties", "classpath:camel.properties"})
 @ComponentScan(basePackages = "ru.qwonix.test")
 public class AppConfig {
     private final Environment env;
 
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
-        final LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
-        em.setDataSource(dataSource());
-        em.setPackagesToScan("ru.qwonix.test");
+        final LocalContainerEntityManagerFactoryBean managerFactoryBean = new LocalContainerEntityManagerFactoryBean();
+        managerFactoryBean.setDataSource(dataSource());
+        managerFactoryBean.setPackagesToScan("ru.qwonix.test");
 
         final JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-        em.setJpaVendorAdapter(vendorAdapter);
-        em.setJpaProperties(additionalProperties());
-        return em;
+        managerFactoryBean.setJpaVendorAdapter(vendorAdapter);
+        managerFactoryBean.setJpaProperties(additionalProperties());
+        return managerFactoryBean;
     }
 
     @Bean
