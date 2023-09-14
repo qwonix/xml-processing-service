@@ -5,7 +5,7 @@ import org.apache.camel.impl.DefaultCamelContext;
 import org.apache.camel.support.DefaultRegistry;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import ru.qwonix.test.DocumentTransformationHistoryService;
+import ru.qwonix.test.service.DocumentTransformationHistoryService;
 
 @Configuration
 public class CamelConfiguration {
@@ -21,9 +21,11 @@ public class CamelConfiguration {
 
         DefaultCamelContext defaultCamelContext = new DefaultCamelContext(defaultRegistry);
         defaultCamelContext.getPropertiesComponent().setLocation("classpath:camel.properties");
+
         defaultCamelContext.addRoutes(camelRoute);
         defaultCamelContext.addRoutes(storeCamelRoute);
         defaultCamelContext.addRoutes(transformCamelRoute);
+
         return defaultCamelContext;
     }
 }

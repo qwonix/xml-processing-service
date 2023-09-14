@@ -23,7 +23,7 @@ public class DocumentTransformationHistory {
     private String originalFileName;
 
     @Column(name = "received_date")
-    private LocalDateTime receivedAt;
+    private LocalDateTime receivedAt = LocalDateTime.now();
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "original_document_id")
@@ -32,6 +32,5 @@ public class DocumentTransformationHistory {
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "transformed_document_id")
     private Document transformed;
-
 
 }

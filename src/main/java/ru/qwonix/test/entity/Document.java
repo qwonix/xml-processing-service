@@ -16,13 +16,13 @@ import javax.persistence.*;
 @Table(name = "document")
 public class Document {
 
+    public Document(String data) {
+        this.data = data;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "data", columnDefinition = "text")
     private String data;
-
-    public Document(String data) {
-        this.data = data;
-    }
 }

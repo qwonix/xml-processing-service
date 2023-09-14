@@ -1,4 +1,4 @@
-package ru.qwonix.test;
+package ru.qwonix.test.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ru.qwonix.test.service.DocumentTransformationHistoryService;
 import ru.qwonix.test.dto.DocumentResponse;
 import ru.qwonix.test.dto.ShortDocumentTransformationHistoryResponse;
 

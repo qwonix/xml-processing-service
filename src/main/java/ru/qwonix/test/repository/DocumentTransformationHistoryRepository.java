@@ -1,4 +1,4 @@
-package ru.qwonix.test;
+package ru.qwonix.test.repository;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
