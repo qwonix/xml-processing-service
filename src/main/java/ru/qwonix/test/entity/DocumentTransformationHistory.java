@@ -32,5 +32,4 @@ public class DocumentTransformationHistory {
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "transformed_document_id")
     private Document transformed;
-
 }
